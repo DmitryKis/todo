@@ -34,4 +34,16 @@ class NoticeController extends AbstractController
             'notice' => $notice,
         ]);
     }
+  
+    /**
+     * @Route("/show/{id}", name="notice_show")
+     */
+    public function showNotice(Request $request, $id) :Response
+    {
+        $entityManager= $this->getDoctrine()->getRepository();
+        return $this->render('notice/show.html.twig',[
+            'notice' => $entityManager-> find($id),
+        ]);
+
+    }
 }
