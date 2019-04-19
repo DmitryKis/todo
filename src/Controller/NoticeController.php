@@ -6,6 +6,7 @@ namespace App\Controller;
 
 use App\Entity\Notice;
 use App\Form\NoticeType;
+use App\Repository\NoticeRepository;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -44,6 +45,14 @@ class NoticeController extends AbstractController
         return $this->render('notice/show.html.twig',[
             'notice' => $entityManager-> find($id),
         ]);
-
+    }
+    /**
+     * @Route("/list", name="notice_list")
+     */
+    public function showAll(Request $request, NoticeRepository $noticeRepository) :Response
+    {
+        return $this->render('notice/list.html.twig',[
+            'notices' => $noticeRepository-> findAll(),
+        ]);
     }
 }
