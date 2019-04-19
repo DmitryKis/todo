@@ -34,8 +34,7 @@ class NoticeController extends AbstractController
             'notice' => $notice,
         ]);
     }
-
-
+  
     /**
      * @Route("/show/{id}", name="notice_show")
      */
@@ -47,5 +46,4 @@ class NoticeController extends AbstractController
         ]);
 
     }
-
 }
