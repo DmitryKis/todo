@@ -1,11 +1,8 @@
 <?php
-
 namespace App\Repository;
-
 use App\Entity\Notice;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Symfony\Bridge\Doctrine\RegistryInterface;
-
 /**
  * @method Notice|null find($id, $lockMode = null, $lockVersion = null)
  * @method Notice|null findOneBy(array $criteria, array $orderBy = null)
@@ -18,7 +15,6 @@ class NoticeRepository extends ServiceEntityRepository
     {
         parent::__construct($registry, Notice::class);
     }
-
     // /**
     //  * @return Notice[] Returns an array of Notice objects
     //  */
@@ -35,7 +31,6 @@ class NoticeRepository extends ServiceEntityRepository
         ;
     }
     */
-
     /*
     public function findOneBySomeField($value): ?Notice
     {
