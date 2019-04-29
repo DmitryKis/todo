@@ -1,9 +1,9 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Notice index{% endblock %}
+{% block title %}ToDo list{% endblock %}
 
 {% block body %}
-    <h1>Notice index</h1>
+    <h1>ToDo list</h1>
 
     <table class="table">
         <thead>
@@ -18,6 +18,7 @@
         </thead>
         <tbody>
         {% for notice in notices %}
+
             <tr>
                 <td>{{ notice.id }}</td>
                 <td>{{ notice.Title }}</td>
@@ -25,8 +26,8 @@
                 <td>{{ notice.Deadline ? notice.Deadline|date('Y-m-d H:i:s') : '' }}</td>
                 <td>{{ notice.Done ? 'Yes' : 'No' }}</td>
                 <td>
-                    <a href="{{ path('notice_show', {'id': notice.id}) }}">show</a>
-                    <a href="{{ path('notice_edit', {'id': notice.id}) }}">edit</a>
+                    <a href="{{ path('notice_show', {'id': notice.id}) }}" >Show</a>
+                    <a href="{{ path('notice_edit', {'id': notice.id}) }}" style="margin-left: 20px">Edit</a>
                 </td>
             </tr>
         {% else %}
