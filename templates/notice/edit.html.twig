@@ -3,11 +3,11 @@
 {% block title %}Edit Notice{% endblock %}
 
 {% block body %}
-    <h1>Edit Notice</h1>
-
+    <h1 style="text-align: center">Edit Notice</h1>
+    <div class="form-group" style="width: 500px; margin-left: auto; margin-right: auto">
     {{ include('notice/_form.html.twig', {'button_label': 'Update'}) }}
 
-    <a href="{{ path('notice_index') }}">back to list</a>
 
     {{ include('notice/_delete_form.html.twig') }}
+    </div>
 {% endblock %}

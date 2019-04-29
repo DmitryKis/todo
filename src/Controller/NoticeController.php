@@ -4,11 +4,13 @@ namespace App\Controller;
 
 use App\Entity\Notice;
 use App\Form\Notice1Type;
+use App\Form\NoticeType;
 use App\Repository\NoticeRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+
 
 /**
  * @Route("/notice")
@@ -63,7 +65,7 @@ class NoticeController extends AbstractController
      */
     public function edit(Request $request, Notice $notice): Response
     {
-        $form = $this->createForm(Notice1Type::class, $notice);
+        $form = $this->createForm(NoticeType::class, $notice);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {

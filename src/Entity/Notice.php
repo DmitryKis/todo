@@ -32,7 +32,7 @@ class Notice
     private $Deadline;
 
     /**
-     * @ORM\Column(type="boolean")
+     * @ORM\Column(type="boolean", nullable=true)
      */
     private $Done;
 

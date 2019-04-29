@@ -3,9 +3,10 @@
 {% block title %}New Notice{% endblock %}
 
 {% block body %}
-    <h1>Create new Notice</h1>
-
+    <h1 style="text-align: center">Create new Notice</h1>
+    <div class="form-group" style="width: 500px; margin-left: auto; margin-right: auto">
     {{ include('notice/_form.html.twig') }}
 
     <a href="{{ path('notice_index') }}">back to list</a>
+    </div>
 {% endblock %}
