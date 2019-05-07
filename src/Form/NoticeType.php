@@ -20,7 +20,7 @@ class NoticeType extends AbstractType
             ->add('Deadline', null, [
                 'widget' => 'single_text', 'attr' => array('class' => 'form-control')
             ])
-            ->add('Done',CheckboxType::class, array('label' => 'Done', 'attr' => array('class' => 'form-control')))
+            ->add('Done',CheckboxType::class, array('required' => false, 'label' => 'Done', 'attr' => array('class' => 'form-control')))
         ;
     }
 
