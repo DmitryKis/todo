@@ -13,6 +13,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 
 
+
 class NoticeController extends AbstractController
 {
     /**
@@ -93,4 +94,5 @@ class NoticeController extends AbstractController
 
         return $this->redirectToRoute('notice_index');
     }
+
 }
