@@ -85,7 +85,7 @@ class NoticeTest extends WebTestCase
     {
         $client = static::createClient();
 
-        $client->request('GET', '/5');
+        $client->request('GET', '/9');
 
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
     }
@@ -127,7 +127,7 @@ class NoticeTest extends WebTestCase
     {
         $client = static::createClient();
 
-        $client->request('POST', '/5/edit');
+        $client->request('POST', '/9/edit');
 
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
     }
@@ -136,7 +136,7 @@ class NoticeTest extends WebTestCase
     {
         $client = static::createClient();
 
-        $client->request('GET', '/5/edit');
+        $client->request('GET', '/9/edit');
 
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
     }
