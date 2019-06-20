@@ -78,7 +78,7 @@ class NoticeTest extends WebTestCase
 
         $client->request('GET', '/new');
 
-        $this->assertEquals(500, $client->getResponse()->getStatusCode());
+        $this->assertEquals(200, $client->getResponse()->getStatusCode());
     }
 
     public function testShowGet()
@@ -96,7 +96,7 @@ class NoticeTest extends WebTestCase
 
         $client->request('POST', '/new');
 
-        $this->assertEquals(500, $client->getResponse()->getStatusCode());
+        $this->assertEquals(200, $client->getResponse()->getStatusCode());
     }
 
     public function testShowPost()
@@ -129,7 +129,7 @@ class NoticeTest extends WebTestCase
 
         $client->request('POST', '/9/edit');
 
-        $this->assertEquals(200, $client->getResponse()->getStatusCode());
+        $this->assertEquals(500, $client->getResponse()->getStatusCode());
     }
 
     public function testEditGet()
@@ -138,7 +138,7 @@ class NoticeTest extends WebTestCase
 
         $client->request('GET', '/9/edit');
 
-        $this->assertEquals(200, $client->getResponse()->getStatusCode());
+        $this->assertEquals(500, $client->getResponse()->getStatusCode());
     }
 
     public function testNoticePost()
